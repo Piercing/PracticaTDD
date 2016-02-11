@@ -17,6 +17,7 @@
 		529AE0E11C6BF6DC00D111FE /* MGCEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 529AE0DF1C6BF4D400D111FE /* MGCEuro.m */; };
 		52A18F7F1C6D242900C7C527 /* MGCDollarTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A18F7E1C6D242900C7C527 /* MGCDollarTest.m */; };
 		52A18F821C6D26B700C7C527 /* MGCDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A18F811C6D26B700C7C527 /* MGCDollar.m */; };
+		52A18F851C6D4B8A00C7C527 /* MGCMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A18F841C6D4B8A00C7C527 /* MGCMoney.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		52A18F7E1C6D242900C7C527 /* MGCDollarTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCDollarTest.m; sourceTree = "<group>"; };
 		52A18F801C6D26B700C7C527 /* MGCDollar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGCDollar.h; sourceTree = "<group>"; };
 		52A18F811C6D26B700C7C527 /* MGCDollar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCDollar.m; sourceTree = "<group>"; };
+		52A18F831C6D4B8A00C7C527 /* MGCMoney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGCMoney.h; sourceTree = "<group>"; };
+		52A18F841C6D4B8A00C7C527 /* MGCMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCMoney.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,8 @@
 				529AE0DF1C6BF4D400D111FE /* MGCEuro.m */,
 				52A18F801C6D26B700C7C527 /* MGCDollar.h */,
 				52A18F811C6D26B700C7C527 /* MGCDollar.m */,
+				52A18F831C6D4B8A00C7C527 /* MGCMoney.h */,
+				52A18F841C6D4B8A00C7C527 /* MGCMoney.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 				529AE0E01C6BF4D400D111FE /* MGCEuro.m in Sources */,
 				529AE0AC1C6BEE2100D111FE /* AppDelegate.m in Sources */,
 				529AE0A91C6BEE2100D111FE /* main.m in Sources */,
+				52A18F851C6D4B8A00C7C527 /* MGCMoney.m in Sources */,
 				52A18F821C6D26B700C7C527 /* MGCDollar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MGCMoney.h"
 
-@interface MGCDollar : NSObject
+@interface MGCDollar : MGCMoney
 
 -(id)initWithAmount:(NSInteger) amount;
 -(MGCDollar *) times:(NSInteger)multiplier;
