@@ -36,7 +36,7 @@
     // por  dos es  siempre  igual al segundo.
     MGCEuro *total = [five times:2];
     
-    // Compruebo si el primer objeto es igual al objeto total
+    // Compruebo  si el  primer  objeto, 'ten', es  igual  al objeto 'total'.
     // Para  ello tengo que  sobreescribir el método 'isEqual' en 'MGCEuro.m'
     // de mi modelo que tendrá efecto sobre éste  ==> 'XCTAssertEqualObjects'
     XCTAssertEqualObjects(ten, total, @"Equivalent objects should be equal!");

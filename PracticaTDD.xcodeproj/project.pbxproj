@@ -15,6 +15,8 @@
 		529AE0DC1C6BEFB300D111FE /* MGCEuroTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 529AE0DB1C6BEFB300D111FE /* MGCEuroTest.m */; };
 		529AE0E01C6BF4D400D111FE /* MGCEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 529AE0DF1C6BF4D400D111FE /* MGCEuro.m */; };
 		529AE0E11C6BF6DC00D111FE /* MGCEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 529AE0DF1C6BF4D400D111FE /* MGCEuro.m */; };
+		52A18F7F1C6D242900C7C527 /* MGCDollarTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A18F7E1C6D242900C7C527 /* MGCDollarTest.m */; };
+		52A18F821C6D26B700C7C527 /* MGCDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A18F811C6D26B700C7C527 /* MGCDollar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,9 @@
 		529AE0DB1C6BEFB300D111FE /* MGCEuroTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCEuroTest.m; sourceTree = "<group>"; };
 		529AE0DE1C6BF4D400D111FE /* MGCEuro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGCEuro.h; sourceTree = "<group>"; };
 		529AE0DF1C6BF4D400D111FE /* MGCEuro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCEuro.m; sourceTree = "<group>"; };
+		52A18F7E1C6D242900C7C527 /* MGCDollarTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCDollarTest.m; sourceTree = "<group>"; };
+		52A18F801C6D26B700C7C527 /* MGCDollar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGCDollar.h; sourceTree = "<group>"; };
+		52A18F811C6D26B700C7C527 /* MGCDollar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCDollar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				529AE0DB1C6BEFB300D111FE /* MGCEuroTest.m */,
+				52A18F7E1C6D242900C7C527 /* MGCDollarTest.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -150,6 +156,8 @@
 			children = (
 				529AE0DE1C6BF4D400D111FE /* MGCEuro.h */,
 				529AE0DF1C6BF4D400D111FE /* MGCEuro.m */,
+				52A18F801C6D26B700C7C527 /* MGCDollar.h */,
+				52A18F811C6D26B700C7C527 /* MGCDollar.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -289,6 +297,7 @@
 				529AE0E01C6BF4D400D111FE /* MGCEuro.m in Sources */,
 				529AE0AC1C6BEE2100D111FE /* AppDelegate.m in Sources */,
 				529AE0A91C6BEE2100D111FE /* main.m in Sources */,
+				52A18F821C6D26B700C7C527 /* MGCDollar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +307,7 @@
 			files = (
 				529AE0E11C6BF6DC00D111FE /* MGCEuro.m in Sources */,
 				529AE0DC1C6BEFB300D111FE /* MGCEuroTest.m in Sources */,
+				52A18F7F1C6D242900C7C527 /* MGCDollarTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +515,7 @@
 				529AE0D31C6BEE2200D111FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		529AE0D41C6BEE2200D111FE /* Build configuration list for PBXNativeTarget "PracticaTDDTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +524,7 @@
 				529AE0D61C6BEE2200D111FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		529AE0D71C6BEE2200D111FE /* Build configuration list for PBXNativeTarget "PracticaTDDUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +533,7 @@
 				529AE0D91C6BEE2200D111FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

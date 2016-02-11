@@ -1,16 +1,16 @@
 //
-//  PracticaTDD.h
+//  MGCDollar.h
 //  PracticaTDD
 //
-//  Created by MacBook Pro on 10/2/16.
+//  Created by MacBook Pro on 11/2/16.
 //  Copyright © 2016 weblogmerlos.com. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface MGCEuro : NSObject
+@interface MGCDollar : NSObject
 
 -(id)initWithAmount:(NSInteger) amount;
--(MGCEuro *) times:(NSInteger)multiplier;
+-(MGCDollar *) times:(NSInteger)multiplier;
 
 @end
