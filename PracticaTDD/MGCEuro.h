@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface MGCEuro : NSObject
-@property(nonatomic,readonly) NSInteger amount;
 
 -(id)initWithAmount:(NSInteger) amount;
 -(MGCEuro *) times:(NSInteger)multiplier;

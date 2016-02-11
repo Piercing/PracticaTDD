@@ -19,12 +19,11 @@
     
     // Instancio un objeto de la clase que posteriormente crearé
     MGCEuro *euro = [[MGCEuro alloc ]initWithAmount:5];
-    
-    // A euro le mando el mensane 'times' que multiplicará por dos
+    MGCEuro *ten = [[MGCEuro alloc]initWithAmount:10];
+    // A euro le mando el mensaje 'times' que multiplicará por dos
     MGCEuro *total = [euro times:2];
     
-    // Aplico la macro, compruebo que la cantidad (amount) de euros sea igual a 10.
-    XCTAssertEqual(total.amount, 10, @"5*2 should be 10");
+    XCTAssertEqualObjects(total, ten, @"€5 * 2 should be €10");
 }
 
 // Test de igualdad, es decir, me aseguro que, por ejemplo, 5€ = 5€ pase lo que pase.
@@ -37,8 +36,10 @@
     // por  dos es  siempre  igual al segundo.
     MGCEuro *total = [five times:2];
     
-    // Compruebo si el primero es igual al total (primero x segundo)
-    XCTAssertEqualObjects(ten, total, @"Equivalent objects should be equal");
+    // Compruebo si el primer objeto es igual al objeto total
+    // Para  ello tengo que  sobreescribir el método 'isEqual' en 'MGCEuro.m'
+    // de mi modelo que tendrá efecto sobre éste  ==> 'XCTAssertEqualObjects'
+    XCTAssertEqualObjects(ten, total, @"Equivalent objects should be equal!");
 }
 
 
