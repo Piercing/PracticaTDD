@@ -7,6 +7,7 @@
 //
 
 #import "MGCMoney.h"
+#import "NSObject+GNUStepAddons.h"
 @interface MGCMoney ()
 @property(nonatomic) NSInteger amount;
 @end
@@ -22,11 +23,11 @@
     }
     return self;
 }
-// Con este método me aseguro que MGCEuro sea inmutable
+
 -(MGCMoney *) times:(NSInteger)multiplier{
     // No se debe de llamar, sino que
-    // debe de usar el de la  subclase
-    return self;
+    // debe de usar el de la subclase
+    return [self subclassResponsability:_cmd];
 }
 
 @end

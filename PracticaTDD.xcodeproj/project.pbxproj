@@ -18,6 +18,8 @@
 		52A18F7F1C6D242900C7C527 /* MGCDollarTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A18F7E1C6D242900C7C527 /* MGCDollarTest.m */; };
 		52A18F821C6D26B700C7C527 /* MGCDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A18F811C6D26B700C7C527 /* MGCDollar.m */; };
 		52A18F851C6D4B8A00C7C527 /* MGCMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A18F841C6D4B8A00C7C527 /* MGCMoney.m */; };
+		52A18F891C6D521300C7C527 /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A18F881C6D521300C7C527 /* NSObject+GNUStepAddons.m */; };
+		52A18F8B1C6D566A00C7C527 /* MGCMoneyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A18F8A1C6D566A00C7C527 /* MGCMoneyTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,9 @@
 		52A18F811C6D26B700C7C527 /* MGCDollar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCDollar.m; sourceTree = "<group>"; };
 		52A18F831C6D4B8A00C7C527 /* MGCMoney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGCMoney.h; sourceTree = "<group>"; };
 		52A18F841C6D4B8A00C7C527 /* MGCMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCMoney.m; sourceTree = "<group>"; };
+		52A18F871C6D521300C7C527 /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
+		52A18F881C6D521300C7C527 /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
+		52A18F8A1C6D566A00C7C527 /* MGCMoneyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCMoneyTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +113,7 @@
 		529AE0A61C6BEE2100D111FE /* PracticaTDD */ = {
 			isa = PBXGroup;
 			children = (
+				52A18F861C6D4FEC00C7C527 /* Categories */,
 				529AE0DD1C6BF4AC00D111FE /* Models */,
 				529AE0AA1C6BEE2100D111FE /* AppDelegate.h */,
 				529AE0AB1C6BEE2100D111FE /* AppDelegate.m */,
@@ -150,6 +156,7 @@
 			children = (
 				529AE0DB1C6BEFB300D111FE /* MGCEuroTest.m */,
 				52A18F7E1C6D242900C7C527 /* MGCDollarTest.m */,
+				52A18F8A1C6D566A00C7C527 /* MGCMoneyTest.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -165,6 +172,15 @@
 				52A18F841C6D4B8A00C7C527 /* MGCMoney.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		52A18F861C6D4FEC00C7C527 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				52A18F871C6D521300C7C527 /* NSObject+GNUStepAddons.h */,
+				52A18F881C6D521300C7C527 /* NSObject+GNUStepAddons.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +318,7 @@
 				529AE0E01C6BF4D400D111FE /* MGCEuro.m in Sources */,
 				529AE0AC1C6BEE2100D111FE /* AppDelegate.m in Sources */,
 				529AE0A91C6BEE2100D111FE /* main.m in Sources */,
+				52A18F891C6D521300C7C527 /* NSObject+GNUStepAddons.m in Sources */,
 				52A18F851C6D4B8A00C7C527 /* MGCMoney.m in Sources */,
 				52A18F821C6D26B700C7C527 /* MGCDollar.m in Sources */,
 			);
@@ -311,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A18F8B1C6D566A00C7C527 /* MGCMoneyTest.m in Sources */,
 				529AE0E11C6BF6DC00D111FE /* MGCEuro.m in Sources */,
 				529AE0DC1C6BEFB300D111FE /* MGCEuroTest.m in Sources */,
 				52A18F7F1C6D242900C7C527 /* MGCDollarTest.m in Sources */,
