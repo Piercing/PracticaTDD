@@ -63,6 +63,7 @@
 		52A18F871C6D521300C7C527 /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
 		52A18F881C6D521300C7C527 /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
 		52A18F8A1C6D566A00C7C527 /* MGCMoneyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCMoneyTest.m; sourceTree = "<group>"; };
+		52A18F8C1C6D6AB800C7C527 /* MGCMoney-Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MGCMoney-Private.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +171,7 @@
 				52A18F811C6D26B700C7C527 /* MGCDollar.m */,
 				52A18F831C6D4B8A00C7C527 /* MGCMoney.h */,
 				52A18F841C6D4B8A00C7C527 /* MGCMoney.m */,
+				52A18F8C1C6D6AB800C7C527 /* MGCMoney-Private.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";

@@ -53,6 +53,21 @@
 
 }
 
+// Compruebo que guardar cosas en 'amount' funciona
+-(void)testAmountStorage{
+    
+    MGCEuro *euro = [[MGCEuro alloc]initWithAmount:2];
+
+// Con esto hago que el warnig de '@selector' se me tranquilice el muchacho
+#pragma clang diagnostic push// 'push' mete directivas al compilador para que ignore warnings
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    // Envío este mensaje para poder acceder a la interfaz privada donde se encuetra
+    // 'amount' que  es  la  categoría  creada  anteriormente ==>'MGCMoney-Private.h'
+    // ==>[euro performSelector:<#(SEL)#>];
+    // Me aseguro de que cuando recupere amount va a ser 2
+    XCTAssertEqual(2, [[euro performSelector:@selector(amount)]integerValue], @"The values retrived should be the same as the stored");
+#pragma clang diagnostic pop// con 'pop' lo saco
+}
 
 
 

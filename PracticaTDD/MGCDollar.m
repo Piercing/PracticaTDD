@@ -7,55 +7,21 @@
 //
 
 #import "MGCDollar.h"
-
-@interface MGCDollar()
-// Oculto la propiedad amount, la elimino del punto h
-@property(nonatomic) NSInteger amount;
-@end
+#import "MGCMoney-Private.h"
 
 @implementation MGCDollar
 
--(id)initWithAmount:(NSInteger) amount{
-    
-    if(self = [super init]){
-        
-        _amount = amount;
-    }
-    return self;
-}
 // Con este método me aseguro que MGCEuro sea inmutable
 -(MGCDollar *) times:(NSInteger)multiplier{
     // Nueva instancia
     MGCDollar *newDollar = [[MGCDollar alloc]
-                            initWithAmount:self.amount * multiplier];
+                            initWithAmount:[self.amount integerValue] * multiplier];
     return  newDollar;
 }
 
 #pragma mark - Overwritten
-// Sobreescribo el método 'isEqual:(id)object',ya que en el momento en el cual
-// empiezo a crear objetos que puedan ser equivalentes tengo que implementarlo.
-// Sino lo hago lo hará NSObject, y éste compara punteros, es decir, posicones
-// de memoria, y si comparo dos objetos en un test sin implementar este método,
-// siempre me va a devolver falso, ya que dichos objetos están en posciones distintas
-// de memoria y son por tanto distintos objetos. Si lo implementamos, lo que hará, no
-// es comparar las posciones de memoria de los objetos, sino comparar si esos objetos
-// son del mismo tipo.
--(BOOL)isEqual:(id)object{
-    // Hago la comparación más sencilla posible para
-    // pasar  el test, si  amount  es igual a amount,
-    // es decir, comparar la cantidad.
-    return [self amount] == [object amount];
-}
 
-// Sobreescribo  aquí el método 'Hash' ya  que sino en los test llamará al
-// de la superclase y lo que quiero es que llame a éste que es su subclase
--(NSUInteger) hash{
-    
-    // Lo  más  sencillo de implementar  aquí para que se
-    // cumpla que dos ojetos iguales tengan el mismo hash
-    // es decirle que es un entero largo sin signo (NSUInteger).
-    return (NSUInteger) self.amount;
-}
+
 
 
 

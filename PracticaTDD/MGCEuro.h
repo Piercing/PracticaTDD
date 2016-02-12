@@ -11,7 +11,7 @@
 
 @interface MGCEuro : MGCMoney
 
--(id)initWithAmount:(NSInteger) amount;
+
 -(MGCEuro *) times:(NSInteger)multiplier;
 
 @end

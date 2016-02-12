@@ -11,7 +11,6 @@
 
 @interface MGCDollar : MGCMoney
 
--(id)initWithAmount:(NSInteger) amount;
 -(MGCDollar *) times:(NSInteger)multiplier;
 
 @end
