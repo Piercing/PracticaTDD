@@ -42,6 +42,28 @@
     XCTAssertEqualObjects(ten, total, @"Equivalent objects should be equal!");
 }
 
+-(void) testHash{
+    
+    MGCEuro *a = [[MGCEuro alloc]initWithAmount:2];
+    MGCEuro *b = [[MGCEuro alloc]initWithAmount:2];
+    // El hash lo que devuelve es un entero largo sin signo,
+    // no es un  objeto por tanto  uso la  de Equal a secas.
+    
+    XCTAssertEqual([a hash], [b hash], @"Equal objects must have same hash");
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

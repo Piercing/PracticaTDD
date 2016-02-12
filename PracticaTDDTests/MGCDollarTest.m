@@ -42,4 +42,26 @@
     XCTAssertFalse([total isEqual:five], @"Non equivalent objects should not be equal");
 }
 
+-(void) testHash{
+    
+    MGCDollar *a = [[MGCDollar alloc]initWithAmount:2];
+    MGCDollar *b = [[MGCDollar alloc]initWithAmount:2];
+    
+    // El hash lo que devuelve es un entero largo sin signo,
+    // no es un  objeto por tanto  uso la  de Equal a secas.
+    XCTAssertEqual([a hash], [b hash], @"Equal objects must have same hash");
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @end

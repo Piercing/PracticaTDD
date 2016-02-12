@@ -47,4 +47,20 @@
     return [self amount] == [object amount];
 }
 
+// Sobreescribo  aquí el método 'Hash' ya  que sino en los test llamará al
+// de la superclase y lo que quiero es que llame a éste que es su subclase
+-(NSUInteger) hash{
+    
+    // Lo  más  sencillo de implementar  aquí para que se
+    // cumpla que dos ojetos iguales tengan el mismo hash
+    // es decirle que es un entero largo sin signo (NSUInteger).
+    return (NSUInteger) self.amount;
+}
+
+
+
+
+
+
+
 @end
