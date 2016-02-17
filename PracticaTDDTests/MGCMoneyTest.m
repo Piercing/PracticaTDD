@@ -53,6 +53,15 @@
                           @"Equivalent objets should be equal!");
 }
 
+-(void) testDifferentCurrenies{
+    
+    // Test para comprobar que 1$ != 1€
+    MGCMoney *euro = [[MGCMoney alloc]initWithAmount:1 currency:@"EUR"];
+    MGCMoney *dollar = [[MGCMoney alloc]initWithAmount:1 currency:@"USD"];
+    
+    XCTAssertNotEqualObjects(euro, dollar, @"Different curriecies should not be equal!");
+}
+
 -(void) testHash{
     
     MGCMoney *a = [MGCMoney euroWithAmount:2];

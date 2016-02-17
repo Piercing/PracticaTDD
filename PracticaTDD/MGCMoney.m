@@ -67,10 +67,17 @@
 // es comparar las posciones de memoria de los objetos, sino comparar si esos objetos
 // son del mismo tipo.
 -(BOOL)isEqual:(id)object{
-    // Hago la comparación más sencilla posible para
-    // pasar  el test, si  amount  es igual a amount,
-    // es decir, comparar la cantidad.
-    return [self amount] == [object amount];
+    
+    // Compruebo primero que tienen la misma divisa
+    if ([self.currency isEqual:[object currency]]) {
+        // Hago la comparación más sencilla posible para
+        // pasar  el test, si  amount  es igual a amount,
+        // es decir, comparar la cantidad.
+        return [self amount] == [object amount];
+    }else{
+        return NO;
+    }
+    
 }
 
 // Sobreescribo  aquí el método 'Hash' ya  que sino en los test llamará al
