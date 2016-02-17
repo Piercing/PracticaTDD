@@ -8,9 +8,11 @@
 
 #import "MGCMoney.h"
 #import "NSObject+GNUStepAddons.h"
-#import "MGCMoney-Private.h"
-#import "MGCDollar.h"
-#import "MGCEuro.h"
+
+
+@interface MGCMoney ()
+@property(nonatomic, strong) NSNumber *amount;
+@end
 
 @implementation MGCMoney
 
