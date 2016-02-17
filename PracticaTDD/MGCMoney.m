@@ -36,7 +36,7 @@
     return self;
 }
 
--(MGCMoney *) times:(NSInteger)multiplier{
+-(id) times:(NSInteger)multiplier{
     
     // Nueva instancia
     MGCMoney *newMoney = [[MGCMoney alloc]

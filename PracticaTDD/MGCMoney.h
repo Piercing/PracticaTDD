@@ -15,6 +15,6 @@
 
 -(id)initWithAmount:(NSInteger) amount;
 
--(MGCMoney *)times:(NSInteger) multiplier;
+-(id)times:(NSInteger) multiplier;
 
 @end
