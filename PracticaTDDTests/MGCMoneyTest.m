@@ -45,7 +45,7 @@
     MGCMoney *total = [five times:2];
     
     // Compruebo  si el  primer  objeto, 'ten', es  igual  al objeto 'total'.
-    // Para  ello tengo que  sobreescribir el método 'isEqual' en 'MGCMoney.m'
+    // Para ello tengo que  sobreescribir el método 'isEqual' en 'MGCMoney.m'
     // de mi modelo que tendrá efecto sobre éste  ==> 'XCTAssertEqualObjects'
     XCTAssertEqualObjects(ten, total, @"Equivalent objects should be equal!");
     XCTAssertEqualObjects([MGCMoney dollarWithAmount:4],
@@ -93,10 +93,29 @@
     XCTAssertEqual(2, [[[MGCMoney dollarWithAmount:2] performSelector:@selector(amount)]integerValue],
                    @"The values retrived should be the same as the stored");
     
-    
-    
 #pragma clang diagnostic pop// con 'pop' lo saco
 }
+
+-(void) testSimpleAddition{
+
+    // Añadiendo una cantidad, plus, a x dolares
+    // y  compruebo  que  sean  objetos  iguales
+    XCTAssertEqualObjects([[MGCMoney dollarWithAmount:5] plus:
+                           [MGCMoney dollarWithAmount:5]],
+                           [MGCMoney dollarWithAmount:10],
+                           @"$5 + $5 =$10");
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 @end

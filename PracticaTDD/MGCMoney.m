@@ -29,6 +29,7 @@
     return [[MGCMoney alloc]initWithAmount:amount currency:@"USD"];
 }
 
+#pragma Mark - Init Methods
 -(id)initWithAmount:(NSInteger) amount currency:(NSString *)currency{
     
     if(self = [super init]){
@@ -47,6 +48,15 @@
                           currency:self.currency];
     return  newMoney;
     
+}
+
+-(MGCMoney *) plus:(MGCMoney *) other{
+    
+    NSInteger totalAmount = [self.amount integerValue] + [other.amount integerValue];
+    
+    MGCMoney *total = [[MGCMoney alloc]initWithAmount:totalAmount currency:self.currency];
+    
+    return total;
 }
 
 // Sobreescribo  el   método   description

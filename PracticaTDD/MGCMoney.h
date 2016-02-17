@@ -20,4 +20,6 @@
 
 -(id)times:(NSInteger) multiplier;
 
+-(MGCMoney *) plus:(MGCMoney *) other;
+
 @end
