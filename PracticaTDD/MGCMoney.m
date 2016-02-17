@@ -9,8 +9,23 @@
 #import "MGCMoney.h"
 #import "NSObject+GNUStepAddons.h"
 #import "MGCMoney-Private.h"
+#import "MGCDollar.h"
+#import "MGCEuro.h"
 
 @implementation MGCMoney
+
+#pragma Mark - Class Methods
+// Apartir de  ahora  creo  instancias  de  dollar
+// y  euro  con  estos   dos   métodos  de   clase
+// eliminando así los inicalizadores de sus clases
++(id) euroWithAmount:(NSInteger) amount{
+    
+    return [[MGCEuro alloc]initWithAmount:amount];
+}
++(id) dollarWithAmount:(NSInteger) amount{
+    
+    return [[MGCDollar alloc]initWithAmount:amount];
+}
 
 -(id)initWithAmount:(NSInteger) amount{
     
@@ -22,9 +37,12 @@
 }
 
 -(MGCMoney *) times:(NSInteger)multiplier{
-    // No se debe de llamar, sino que
-    // debe de usar el de la subclase
-    return [self subclassResponsability:_cmd];
+    
+    // Nueva instancia
+    MGCMoney *newMoney = [[MGCMoney alloc]
+                          initWithAmount:[self.amount integerValue] * multiplier];
+    return  newMoney;
+    
 }
 
 // Sobreescribo  el   método   description

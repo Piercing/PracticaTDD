@@ -12,6 +12,5 @@
 @interface MGCEuro : MGCMoney
 
 
--(MGCEuro *) times:(NSInteger)multiplier;
 
 @end

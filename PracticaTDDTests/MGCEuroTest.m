@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "MGCEuro.h"
+#import "MGCDollar.h"
 
 @interface MGCEuroTest : XCTestCase
 
@@ -18,8 +19,9 @@
 -(void)testMultiplication{
     
     // Instancio un objeto de la clase que posteriormente crearé
-    MGCEuro *euro = [[MGCEuro alloc ]initWithAmount:5];
-    MGCEuro *ten = [[MGCEuro alloc]initWithAmount:10];
+    // Ahora lo instancio con el inicializador de la clase padre
+    MGCEuro *euro = [MGCMoney euroWithAmount:5];
+    MGCEuro *ten = [MGCMoney euroWithAmount:10];
     // A euro le mando el mensaje 'times' que multiplicará por dos
     MGCEuro *total = [euro times:2];
     
@@ -29,8 +31,8 @@
 // Test de igualdad, es decir, me aseguro que, por ejemplo, 5€ = 5€ pase lo que pase.
 -(void) testEquality{
     
-    MGCEuro *five = [[MGCEuro alloc]initWithAmount:5];
-    MGCEuro *ten = [[MGCEuro alloc]initWithAmount:10];
+    MGCEuro *five = [MGCMoney euroWithAmount:5];
+    MGCEuro *ten = [MGCMoney euroWithAmount:10];
     
     // Me aseguro que el primero multiplicado
     // por  dos es  siempre  igual al segundo.
@@ -44,8 +46,8 @@
 
 -(void) testHash{
     
-    MGCEuro *a = [[MGCEuro alloc]initWithAmount:2];
-    MGCEuro *b = [[MGCEuro alloc]initWithAmount:2];
+    MGCEuro *a = [MGCMoney euroWithAmount:2];
+    MGCEuro *b = [MGCMoney euroWithAmount:2];
     // El hash lo que devuelve es un entero largo sin signo,
     // no es un  objeto por tanto  uso la  de Equal a secas.
     
@@ -56,7 +58,7 @@
 // Compruebo que guardar cosas en 'amount' funciona
 -(void)testAmountStorage{
     
-    MGCEuro *euro = [[MGCEuro alloc]initWithAmount:2];
+    MGCEuro *euro = [MGCMoney euroWithAmount:2];
 
 // Con esto hago que el warnig de '@selector' se me tranquilice el muchacho
 #pragma clang diagnostic push// 'push' mete directivas al compilador para que ignore warnings

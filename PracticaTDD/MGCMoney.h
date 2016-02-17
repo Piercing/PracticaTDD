@@ -10,6 +10,9 @@
 
 @interface MGCMoney : NSObject
 
++(id) euroWithAmount:(NSInteger) amount;
++(id) dollarWithAmount:(NSInteger) amount;
+
 -(id)initWithAmount:(NSInteger) amount;
 
 -(MGCMoney *)times:(NSInteger) multiplier;
