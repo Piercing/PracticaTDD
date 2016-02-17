@@ -13,8 +13,14 @@
 
 @end
 
-//@implementation MGCMoneyTest
-//
-//
-//
-//@end
+@implementation MGCMoneyTest
+
+-(void) testCurrencies{
+    
+    XCTAssertEqualObjects(@"EUR", [[MGCMoney euroWithAmount:1] currency], @"The currency of euros should be EUR");
+    
+    XCTAssertEqualObjects(@"USD", [[MGCMoney dollarWithAmount:1] currency], @"The currency of $1 should be USD");
+}
+
+
+@end

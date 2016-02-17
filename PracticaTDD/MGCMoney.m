@@ -20,18 +20,19 @@
 // eliminando así los inicalizadores de sus clases
 +(id) euroWithAmount:(NSInteger) amount{
     
-    return [[MGCEuro alloc]initWithAmount:amount];
+    return [[MGCMoney alloc]initWithAmount:amount currency:@"EUR"];
 }
 +(id) dollarWithAmount:(NSInteger) amount{
     
-    return [[MGCDollar alloc]initWithAmount:amount];
+    return [[MGCMoney alloc]initWithAmount:amount currency:@"USD"];
 }
 
--(id)initWithAmount:(NSInteger) amount{
+-(id)initWithAmount:(NSInteger) amount currency:(NSString *)currency{
     
     if(self = [super init]){
         // Con esto lo empaqueto dentro de un NSNumber ==> '@(amount)'
         _amount = @(amount);
+        _currency = currency;
     }
     return self;
 }
@@ -40,7 +41,8 @@
     
     // Nueva instancia
     MGCMoney *newMoney = [[MGCMoney alloc]
-                          initWithAmount:[self.amount integerValue] * multiplier];
+                          initWithAmount:[self.amount integerValue] * multiplier
+                          currency:self.currency];
     return  newMoney;
     
 }
