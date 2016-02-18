@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		528E6D1B1C75514D0039BCE8 /* MGCBrokerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 528E6D1A1C75514D0039BCE8 /* MGCBrokerTest.m */; };
+		528E6D1E1C7551930039BCE8 /* MGCBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 528E6D1D1C7551930039BCE8 /* MGCBroker.m */; };
+		528E6D1F1C7551930039BCE8 /* MGCBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 528E6D1D1C7551930039BCE8 /* MGCBroker.m */; };
 		529AE0A91C6BEE2100D111FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 529AE0A81C6BEE2100D111FE /* main.m */; };
 		529AE0AC1C6BEE2100D111FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 529AE0AB1C6BEE2100D111FE /* AppDelegate.m */; };
 		529AE0B41C6BEE2100D111FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 529AE0B31C6BEE2100D111FE /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		528E6D1A1C75514D0039BCE8 /* MGCBrokerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCBrokerTest.m; sourceTree = "<group>"; };
+		528E6D1C1C7551930039BCE8 /* MGCBroker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGCBroker.h; sourceTree = "<group>"; };
+		528E6D1D1C7551930039BCE8 /* MGCBroker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCBroker.m; sourceTree = "<group>"; };
 		529AE0A41C6BEE2100D111FE /* PracticaTDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticaTDD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		529AE0A81C6BEE2100D111FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		529AE0AA1C6BEE2100D111FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -144,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				52A18F8A1C6D566A00C7C527 /* MGCMoneyTest.m */,
+				528E6D1A1C75514D0039BCE8 /* MGCBrokerTest.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -153,6 +160,8 @@
 			children = (
 				52A18F831C6D4B8A00C7C527 /* MGCMoney.h */,
 				52A18F841C6D4B8A00C7C527 /* MGCMoney.m */,
+				528E6D1C1C7551930039BCE8 /* MGCBroker.h */,
+				528E6D1D1C7551930039BCE8 /* MGCBroker.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -300,6 +309,7 @@
 			files = (
 				529AE0AC1C6BEE2100D111FE /* AppDelegate.m in Sources */,
 				529AE0A91C6BEE2100D111FE /* main.m in Sources */,
+				528E6D1E1C7551930039BCE8 /* MGCBroker.m in Sources */,
 				52A18F891C6D521300C7C527 /* NSObject+GNUStepAddons.m in Sources */,
 				52A18F851C6D4B8A00C7C527 /* MGCMoney.m in Sources */,
 			);
@@ -309,6 +319,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				528E6D1F1C7551930039BCE8 /* MGCBroker.m in Sources */,
+				528E6D1B1C75514D0039BCE8 /* MGCBrokerTest.m in Sources */,
 				52A18F8B1C6D566A00C7C527 /* MGCMoneyTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
