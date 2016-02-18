@@ -26,11 +26,36 @@
     return self;
 }
 
-// Método cutre para devolver divisas
+// Método para devolver divisas, reduce 'x'
+// dinero al tipo de moneda que le pasamos
 -(MGCMoney *)reduce:(MGCMoney *) money
          toCurrency:(NSString *) currency{
     
-    return money;
+    MGCMoney *result;
+    double rate = [[self.rates
+                       objectForKey:[self keyFromCurrency:money.currency
+                                               toCurrency:currency]]doubleValue];
+    
+    // compruebo que divisa de origen y destino son las mismas
+    if ([money.currency isEqual:currency]) {
+        result = money;
+    }else if (rate == 0){
+        // No hay tasa de conversión, excepción que te al canto
+        [NSException raise:@"NoConversionRateException"
+                    format:@"Must have a conversion from %@ to %@", money.currency, currency];
+    }else{
+        // Tengo conversión
+        double rate = [[self.rates objectForKey:[self keyFromCurrency:money.currency
+                                                              toCurrency:currency]] doubleValue];
+        
+        NSInteger newAmount = [money.amount integerValue] * rate;
+        
+        result = [[MGCMoney alloc]
+                              initWithAmount:newAmount
+                              currency:currency];
+        
+    }
+    return result;
 }
 
 -(void)addRate:(NSInteger) rate
@@ -43,6 +68,11 @@
     [self.rates setObject:@(rate)
                    forKey:[self keyFromCurrency:fromCurrency
                                      toCurrency:toCurrency]];
+    
+    NSNumber *invRate = @(1.0/rate);
+    [self.rates setObject: invRate
+                   forKey:[self keyFromCurrency:toCurrency
+                                     toCurrency:fromCurrency]];
 }
 
 

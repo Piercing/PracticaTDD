@@ -64,8 +64,8 @@
 #pragma mark - Overwritten
 -(NSString *) description{
     
-    return [NSString stringWithFormat:@"<%@ %ld>",
-            [self class],(long)[self amount]];
+    return [NSString stringWithFormat:@"<%@: %@ %@>",
+            [self class],self.currency, self.amount];
 }
 
 // Sobreescribo el método 'isEqual:(id)object',ya que en el momento en el cual
@@ -96,8 +96,8 @@
     
     // Lo  más  sencillo de implementar  aquí para que se
     // cumpla que dos ojetos iguales tengan el mismo hash
-    // es decirle que es un entero largo sin signo (NSUInteger).
-    return (NSUInteger) self.amount;
+    // es  decirle que extraiga de amount su valor entero.
+    return [self.amount integerValue];
 }
 
 @end
