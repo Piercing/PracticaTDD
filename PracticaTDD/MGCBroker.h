@@ -10,6 +10,10 @@
 @class MGCMoney;
 @interface MGCBroker : NSObject
 
--(MGCMoney *)reduce:(MGCMoney *) money toCurrency:(NSString *) currency;
+-(MGCMoney *)reduce:(MGCMoney *) money
+         toCurrency:(NSString *) currency;
 
+-(void)addRate:(NSInteger)rate
+  fromCurrency:(NSString *) fromCurrency
+    toCurrency:(NSString *)toCurrency;
 @end

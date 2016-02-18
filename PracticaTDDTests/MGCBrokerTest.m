@@ -42,4 +42,34 @@
     XCTAssertEqualObjects(sum, reduced, @"Conversion to same currency should be a NOP");
 }
 
+// Test para comprobar que: $10 = €5 => 2:1
+-(void) testReduction{
+    
+    MGCBroker *broker = [MGCBroker new];
+    // El borker necesita saber las tasas de conversión, se las decimos
+    [broker addRate: 2 fromCurrency:@"USD" toCurrency:@"EUR"];
+    
+    MGCMoney *dollars = [MGCMoney dollarWithAmount:10];
+    MGCMoney *euros = [MGCMoney euroWithAmount:5];
+    
+    MGCMoney *converted = [broker reduce:dollars
+                              toCurrency:@"EUR"];
+    
+    // Compruebo que son iguales
+    XCTAssertEqualObjects(converted, euros, @"$10 = €5 => 2:1");
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @end

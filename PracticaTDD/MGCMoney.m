@@ -78,7 +78,7 @@
 // son del mismo tipo.
 -(BOOL)isEqual:(id)object{
     
-    // Compruebo primero que tienen la misma divisa
+    // Compruebo  primero  que  tienen  la misma  divisa
     if ([self.currency isEqual:[object currency]]) {
         // Hago la comparación más sencilla posible para
         // pasar  el test, si  amount  es igual a amount,
