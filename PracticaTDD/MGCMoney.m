@@ -92,7 +92,7 @@
 
 // Sobreescribo  aquí el método 'Hash' ya  que sino en los test llamará al
 // de la superclase y lo que quiero es que llame a éste que es su subclase
--(NSUInteger) hash{
+-(NSUInteger) hash{                // el 'hash' es lo mismo que el 'amount'
     
     // Lo  más  sencillo de implementar  aquí para que se
     // cumpla que dos ojetos iguales tengan el mismo hash

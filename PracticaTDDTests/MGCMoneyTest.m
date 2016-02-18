@@ -107,7 +107,21 @@
 }
 
 
+-(void) testThatHashIsAmount {
+    
+    MGCMoney *one = [MGCMoney dollarWithAmount:1];
+    // Compruebo que 'one hash' es lo mismo que 1
+    XCTAssertEqual ([one hash], 1, @"The hash must be the same as the amount");
+}
 
+// Comprobando la description
+-(void) testDescription {
+    
+    MGCMoney *one = [MGCMoney dollarWithAmount:1];
+    NSString *desc = @"<MGCMoney: $1>";
+    
+    XCTAssertEqualObjects(desc, [one description], @"Description must match template");
+}
 
 
 
