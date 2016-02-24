@@ -33,8 +33,8 @@
     
     MGCMoney *result;
     double rate = [[self.rates
-                       objectForKey:[self keyFromCurrency:money.currency
-                                               toCurrency:currency]]doubleValue];
+                    objectForKey:[self keyFromCurrency:money.currency
+                                            toCurrency:currency]]doubleValue];
     
     // compruebo que divisa de origen y destino son las mismas
     if ([money.currency isEqual:currency]) {
@@ -46,13 +46,13 @@
     }else{
         // Tengo conversión
         double rate = [[self.rates objectForKey:[self keyFromCurrency:money.currency
-                                                              toCurrency:currency]] doubleValue];
+                                                           toCurrency:currency]] doubleValue];
         
         NSInteger newAmount = [money.amount integerValue] * rate;
         
         result = [[MGCMoney alloc]
-                              initWithAmount:newAmount
-                              currency:currency];
+                  initWithAmount:newAmount
+                  currency:currency];
         
     }
     return result;

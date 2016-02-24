@@ -53,7 +53,7 @@
                           @"Equivalent objets should be equal!");
 }
 
--(void) testDifferentCurrenies{
+-(void) testDifferentCurrenties{
     
     // Test para comprobar que 1$ != 1€
     MGCMoney *euro = [[MGCMoney alloc]initWithAmount:1 currency:@"EUR"];
