@@ -51,4 +51,29 @@
     return self;
 }
 
+-(id<MGCMoney>) reduceToCurrency:(NSString *) currency
+                      withBroker:(MGCBroker *) broker{
+    // Recorro  el  array y a cada uno de ellos le mando
+    // este  mensaje. Me  va  a  devolver  un 'money' ya
+    // convertido,  y  los   voy  sumando   simplementes.
+    // Se lo mando a cada uno de los elementos del array
+    // de 'money' que tengo.
+    
+    MGCMoney *result = [[MGCMoney alloc] initWithAmount:0 currency:currency];
+    
+    for (MGCMoney *each in self.moneys) {
+        result = [result plus:[each reduceToCurrency:currency withBroker:broker]];
+    }
+    return result;
+}
+
+
+
+
+
+
+
+
+
+
 @end

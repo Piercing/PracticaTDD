@@ -11,7 +11,6 @@
 
 
 @interface MGCBroker ()
-@property(nonatomic, strong) NSMutableDictionary *rates;
 @end
 
 @implementation MGCBroker
@@ -28,34 +27,14 @@
 
 // Método para devolver divisas, reduce 'x'
 // dinero al tipo de moneda que le pasamos
--(id<MGCMoney>)reduce:(MGCMoney *) money
+-(id<MGCMoney>)reduce:(id<MGCMoney>) money
          toCurrency:(NSString *) currency{
     
-    MGCMoney *result;
-    double rate = [[self.rates
-                    objectForKey:[self keyFromCurrency:money.currency
-                                            toCurrency:currency]]doubleValue];
+    // double dispatch, va y vuelve la info
+    return [money reduceToCurrency:currency
+                        withBroker:self];
     
-    // compruebo que divisa de origen y destino son las mismas
-    if ([money.currency isEqual:currency]) {
-        result = money;
-    }else if (rate == 0){
-        // No hay tasa de conversión, excepción que te al canto
-        [NSException raise:@"NoConversionRateException"
-                    format:@"Must have a conversion from %@ to %@", money.currency, currency];
-    }else{
-        // Tengo conversión
-        double rate = [[self.rates objectForKey:[self keyFromCurrency:money.currency
-                                                           toCurrency:currency]] doubleValue];
-        
-        NSInteger newAmount = [money.amount integerValue] * rate;
-        
-        result = [[MGCMoney alloc]
-                  initWithAmount:newAmount
-                  currency:currency];
-        
-    }
-    return result;
+
 }
 
 -(void)addRate:(NSInteger) rate

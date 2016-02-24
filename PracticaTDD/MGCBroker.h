@@ -12,10 +12,14 @@
 @class MGCMoney;
 @interface MGCBroker : NSObject
 
--(id<MGCMoney>)reduce:(MGCMoney *) money
-         toCurrency:(NSString *) currency;
+@property(nonatomic, strong) NSMutableDictionary *rates;
+
+-(MGCMoney *)reduce:(id<MGCMoney>) money
+           toCurrency:(NSString *) currency;
 
 -(void)addRate:(NSInteger)rate
   fromCurrency:(NSString *) fromCurrency
     toCurrency:(NSString *)toCurrency;
+-(NSString *) keyFromCurrency:(NSString *) fromCurrency
+                   toCurrency:(NSString *) toCurrency;
 @end

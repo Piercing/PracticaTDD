@@ -27,20 +27,20 @@
     [super tearDown];
 }
 
-// €40 + $20 = $100  tasa => 2:1
-//-(void) testAdditionWithReduction{
-//    
-//    MGCBroker *broker = [MGCBroker new];
-//    [broker addRate: 2 fromCurrency:@"USD" toCurrency:@"EUR"];
-//    
-//    MGCWallet *wallet = [[MGCWallet alloc] initWithAmount: 40 currency: @"EUR"];
-//    [wallet plus: [MGCMoney dollarWithAmount: 20]];
-//    
-//    MGCMoney *reduced = [broker reduce:wallet toCurrency:@"USD"];
-//    
-//    XCTAssertEqualObjects(reduced, [MGCMoney dollarWithAmount:100], @"€40 + $20 = $100 2:1");
-//    
-//}
+ // €40 + $20 = $100  tasa => 2:1
+-(void) testAdditionWithReduction{
+    
+    MGCBroker *broker = [MGCBroker new];
+    [broker addRate: 2 fromCurrency:@"EUR" toCurrency:@"USD"];
+    
+    MGCWallet *wallet = [[MGCWallet alloc] initWithAmount: 40 currency: @"EUR"];
+    [wallet plus: [MGCMoney dollarWithAmount: 20]];
+    
+    MGCMoney *reduced = [broker reduce:wallet toCurrency:@"USD"];
+    
+    XCTAssertEqualObjects(reduced, [MGCMoney dollarWithAmount:100], @"€40 + $20 = $100 2:1");
+    
+}
 
 
 

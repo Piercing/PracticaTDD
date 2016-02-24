@@ -8,6 +8,7 @@
 
 #import "MGCMoney.h"
 #import "NSObject+GNUStepAddons.h"
+#import "MGCBroker.h"
 
 
 
@@ -58,6 +59,33 @@
     MGCMoney *total = [[MGCMoney alloc]initWithAmount:totalAmount currency:self.currency];
     
     return total;
+}
+
+-(id<MGCMoney>) reduceToCurrency:(NSString *) currency
+                      withBroker:(MGCBroker *) broker{
+    MGCMoney *result;
+    double rate = [[broker.rates
+                    objectForKey:[broker keyFromCurrency:self.currency
+                                            toCurrency:currency]]doubleValue];
+    
+    // compruebo que divisa de origen y destino son las mismas
+    if ([self.currency isEqual:currency]) {
+        result = self;
+    }else if (rate == 0){
+        // No hay tasa de conversión, excepción que te al canto
+        [NSException raise:@"NoConversionRateException"
+                    format:@"Must have a conversion from %@ to %@", self.currency, currency];
+    }else{
+        // Tengo conversión
+        NSInteger newAmount = [self.amount integerValue] * rate;
+        
+        result = [[MGCMoney alloc]
+                  initWithAmount:newAmount
+                  currency:currency];
+        
+    }
+    return result;
+    
 }
 
 // Sobreescribo  el   método   description

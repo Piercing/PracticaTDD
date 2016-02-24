@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		521A73DD1C7E61660074A182 /* MGCWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 521A73DC1C7E61660074A182 /* MGCWallet.m */; };
-		521A73DF1C7E61760074A182 /* MGCWalletTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 521A73DE1C7E61760074A182 /* MGCWalletTest.m */; };
-		521A73E01C7E61840074A182 /* MGCWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 521A73DC1C7E61660074A182 /* MGCWallet.m */; };
+		521A73D51C7E601D0074A182 /* MGCWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 521A73D41C7E601D0074A182 /* MGCWallet.m */; };
+		521A73D71C7E603C0074A182 /* MGCWalletTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 521A73D61C7E603C0074A182 /* MGCWalletTest.m */; };
 		528E6D1B1C75514D0039BCE8 /* MGCBrokerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 528E6D1A1C75514D0039BCE8 /* MGCBrokerTest.m */; };
 		528E6D1E1C7551930039BCE8 /* MGCBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 528E6D1D1C7551930039BCE8 /* MGCBroker.m */; };
 		528E6D1F1C7551930039BCE8 /* MGCBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 528E6D1D1C7551930039BCE8 /* MGCBroker.m */; };
@@ -41,9 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		521A73DB1C7E61660074A182 /* MGCWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGCWallet.h; sourceTree = "<group>"; };
-		521A73DC1C7E61660074A182 /* MGCWallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCWallet.m; sourceTree = "<group>"; };
-		521A73DE1C7E61760074A182 /* MGCWalletTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCWalletTest.m; sourceTree = "<group>"; };
+		521A73D31C7E601D0074A182 /* MGCWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGCWallet.h; sourceTree = "<group>"; };
+		521A73D41C7E601D0074A182 /* MGCWallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCWallet.m; sourceTree = "<group>"; };
+		521A73D61C7E603C0074A182 /* MGCWalletTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCWalletTest.m; sourceTree = "<group>"; };
 		528E6D1A1C75514D0039BCE8 /* MGCBrokerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCBrokerTest.m; sourceTree = "<group>"; };
 		528E6D1C1C7551930039BCE8 /* MGCBroker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGCBroker.h; sourceTree = "<group>"; };
 		528E6D1D1C7551930039BCE8 /* MGCBroker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCBroker.m; sourceTree = "<group>"; };
@@ -157,7 +156,7 @@
 			children = (
 				52A18F8A1C6D566A00C7C527 /* MGCMoneyTest.m */,
 				528E6D1A1C75514D0039BCE8 /* MGCBrokerTest.m */,
-				521A73DE1C7E61760074A182 /* MGCWalletTest.m */,
+				521A73D61C7E603C0074A182 /* MGCWalletTest.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -169,8 +168,8 @@
 				52A18F841C6D4B8A00C7C527 /* MGCMoney.m */,
 				528E6D1C1C7551930039BCE8 /* MGCBroker.h */,
 				528E6D1D1C7551930039BCE8 /* MGCBroker.m */,
-				521A73DB1C7E61660074A182 /* MGCWallet.h */,
-				521A73DC1C7E61660074A182 /* MGCWallet.m */,
+				521A73D31C7E601D0074A182 /* MGCWallet.h */,
+				521A73D41C7E601D0074A182 /* MGCWallet.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -320,7 +319,7 @@
 				529AE0A91C6BEE2100D111FE /* main.m in Sources */,
 				528E6D1E1C7551930039BCE8 /* MGCBroker.m in Sources */,
 				52A18F891C6D521300C7C527 /* NSObject+GNUStepAddons.m in Sources */,
-				521A73DD1C7E61660074A182 /* MGCWallet.m in Sources */,
+				521A73D51C7E601D0074A182 /* MGCWallet.m in Sources */,
 				52A18F851C6D4B8A00C7C527 /* MGCMoney.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,10 +328,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				521A73E01C7E61840074A182 /* MGCWallet.m in Sources */,
 				528E6D1F1C7551930039BCE8 /* MGCBroker.m in Sources */,
 				528E6D1B1C75514D0039BCE8 /* MGCBrokerTest.m in Sources */,
-				521A73DF1C7E61760074A182 /* MGCWalletTest.m in Sources */,
+				521A73D71C7E603C0074A182 /* MGCWalletTest.m in Sources */,
 				52A18F8B1C6D566A00C7C527 /* MGCMoneyTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

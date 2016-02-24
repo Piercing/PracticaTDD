@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @class MGCMoney;
+@class MGCBroker;
 
 @protocol MGCMoney <NSObject>
 
@@ -20,6 +21,7 @@
 
 -(id<MGCMoney>) plus:(MGCMoney *) other;
 
+-(id<MGCMoney>) reduceToCurrency:(NSString *) currency withBroker:(MGCBroker *) broker;
 
 @end
 @interface MGCMoney : NSObject<MGCMoney>
