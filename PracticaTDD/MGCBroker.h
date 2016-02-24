@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MGCMoney.h"
+
 @class MGCMoney;
 @interface MGCBroker : NSObject
 
--(MGCMoney *)reduce:(MGCMoney *) money
+-(id<MGCMoney>)reduce:(MGCMoney *) money
          toCurrency:(NSString *) currency;
 
 -(void)addRate:(NSInteger)rate

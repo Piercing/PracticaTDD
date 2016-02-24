@@ -28,7 +28,7 @@
 
 // Método para devolver divisas, reduce 'x'
 // dinero al tipo de moneda que le pasamos
--(MGCMoney *)reduce:(MGCMoney *) money
+-(id<MGCMoney>)reduce:(MGCMoney *) money
          toCurrency:(NSString *) currency{
     
     MGCMoney *result;

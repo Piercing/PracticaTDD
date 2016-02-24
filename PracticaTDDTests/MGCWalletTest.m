@@ -8,6 +8,8 @@
 
 #import <XCTest/XCTest.h>
 #import "MGCMoney.h"
+#import "MGCBroker.h"
+#import "MGCWallet.h"
 
 @interface MGCWalletTest : XCTestCase
 
@@ -26,19 +28,19 @@
 }
 
 // €40 + $20 = $100  tasa => 2:1
--(void) testAdditionWithReduction{
-    
-    MGCBroker *broker = [MGCBroker new];
-    [broker addRate: 2 fromCurrency:@"USD" toCurrency:@"EUR"];
-    
-    MGCWallet *wallet = [[MGCWallet alloc] initWithAmount: 40 currency: @"EUR"];
-    [wallet plus: [MGCMoney dollarWithAmount: 20]];
-    
-    MGCMoney *reduced = [broker reduce:wallet toCurrency:@"USD"];
-    
-    XCTAssertEqualObjects(reduced, [MGCMoney dollarWithAmount:100], @"€40 + $20 = $100 2:1");
-    
-}
+//-(void) testAdditionWithReduction{
+//    
+//    MGCBroker *broker = [MGCBroker new];
+//    [broker addRate: 2 fromCurrency:@"USD" toCurrency:@"EUR"];
+//    
+//    MGCWallet *wallet = [[MGCWallet alloc] initWithAmount: 40 currency: @"EUR"];
+//    [wallet plus: [MGCMoney dollarWithAmount: 20]];
+//    
+//    MGCMoney *reduced = [broker reduce:wallet toCurrency:@"USD"];
+//    
+//    XCTAssertEqualObjects(reduced, [MGCMoney dollarWithAmount:100], @"€40 + $20 = $100 2:1");
+//    
+//}
 
 
 

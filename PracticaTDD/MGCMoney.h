@@ -7,20 +7,28 @@
 //
 
 #import <Foundation/Foundation.h>
+@class MGCMoney;
 
-@interface MGCMoney : NSObject
+@protocol MGCMoney <NSObject>
 
-@property(nonatomic, strong, readonly) NSNumber *amount;
+-(id)initWithAmount:(NSInteger) amount
+           currency:(NSString *)currency;
+
+// Times devuelve un objeto que implementa
+// el protocolo 'MGCMoney'
+-(id<MGCMoney>) times:(NSInteger) multiplier;
+
+-(id<MGCMoney>) plus:(MGCMoney *) other;
+
+
+@end
+@interface MGCMoney : NSObject<MGCMoney>
+
+@property (nonatomic, strong, readonly) NSNumber *amount;
 @property (nonatomic, readonly) NSString *currency;
 
 +(id) euroWithAmount:(NSInteger) amount;
 +(id) dollarWithAmount:(NSInteger) amount;
 
--(id)initWithAmount:(NSInteger) amount
-           currency:(NSString *)currency;
-
--(id)times:(NSInteger) multiplier;
-
--(MGCMoney *) plus:(MGCMoney *) other;
 
 @end

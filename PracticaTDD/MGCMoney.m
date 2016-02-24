@@ -10,6 +10,7 @@
 #import "NSObject+GNUStepAddons.h"
 
 
+
 @interface MGCMoney ()
 @property(nonatomic, strong) NSNumber *amount;
 @end
@@ -40,7 +41,7 @@
     return self;
 }
 
--(id) times:(NSInteger)multiplier{
+-(id<MGCMoney>) times:(NSInteger)multiplier{
     
     // Nueva instancia
     MGCMoney *newMoney = [[MGCMoney alloc]
@@ -50,7 +51,7 @@
     
 }
 
--(MGCMoney *) plus:(MGCMoney *) other{
+-(id<MGCMoney>) plus:(MGCMoney *) other{
     
     NSInteger totalAmount = [self.amount integerValue] + [other.amount integerValue];
     
